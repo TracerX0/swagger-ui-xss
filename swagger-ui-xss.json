@@ -1,0 +1,30 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Test API",
+    "version": "1.0.0"
+  },
+  "host": "example.com",
+  "schemes": ["http"],
+  "paths": {
+    "/test": {
+      "get": {
+        "summary": "Test",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "x": {
+                  "type": "string",
+                  "example": "<script>alert('XSS')</script>"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
